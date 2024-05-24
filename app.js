@@ -1,26 +1,29 @@
 let searchBar = document.getElementById('searchBar');
-let cardsDiv = document.querySelector('.cards') ;
+let cardsDiv = document.querySelector('.cards'),
+newsResult = document.getElementById('newsResult');
 
 
-// var defaultNews =()=>{  
-// return new Promise(function(resolve,reject){
-//     fetch(`
-//     https://newsdata.io/api/1/latest?apikey=pub_447088ff917e919eaf9ceebaec20f88529127&q=pakistan&language=en`
-//     )
-//     .then(function(res){
-//         return res.json();
-//     })
-//     .then(function(res){
-//         resolve(res);
-//         displayNews(res);
-//         console.log(res);
-//     })
-//     .catch(function(err){
-//         reject(err);
-//         console.log("error",err)
-//     })
-// })
-// }
+var defaultNews =()=>{  
+return new Promise(function(resolve,reject){
+    fetch(`
+    https://newsdata.io/api/1/latest?apikey=pub_447088ff917e919eaf9ceebaec20f88529127&q=pakistan&language=en`
+    )
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(res){
+        resolve(res);
+        displayNews(res);
+        newsResult.innerHTML = "Showing Result for Pakistan";
+        console.log(res);
+    })
+    .catch(function(err){
+        reject(err);
+        console.log("error",err)
+    })
+})
+}
+// window.onload = defaultNews();
 
 var searchNews = () => {
     return new Promise(function(resolve, reject) {
@@ -67,13 +70,13 @@ var displayNews = (data) => {
                     <div class="descriptionDiv">
                         <h5 class="cardTitle">${truncatTitle}</h5>
                         <p>${truncatDescription}</p>
-                        <a href="${visitLink}" target="_blank"><button>Visit Website</button></a> 
+                        <a href="${visitLink}" target="_blank"><button class="visitBtn">Visit Website</button></a> 
                     </div>
                 </div>`;
             }
         });
     } else {
-        newsCard.innerHTML = "<p>No news items found.</p>";
+        cardsDiv.innerHTML = "<p>No news items found.</p>";
     }
 }
 
