@@ -67,7 +67,6 @@ main{
 }
 .cards{
     width: 100%;
-    height: 18rem!important;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 40px;
@@ -78,7 +77,8 @@ main{
     gap: 10px;
 
 }
-.cardDesc1,.cardDesc2,.cardDesc3,.cardDesc4{
+.cardDesc1{
+    height: 32rem!important;
     width: 32%;
     text-align: center;
     box-shadow: rgba(91, 91, 98, 0.2) 0px 7px 29px 0px;
@@ -92,6 +92,14 @@ main{
 .descriptionDiv, .cardTitle{
     padding: 8px;
 }
+.descriptionDiv {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 img{
     width: 100%;
     height: 250px;
@@ -121,14 +129,14 @@ p{
 }
 
 @media (max-width: 850px) {
-       .cardDesc1,.cardDesc2,.cardDesc3,.cardDesc4{
+       .cardDesc1{
        width: 40%;
        margin-top: 10px;
    }
 }
 
 @media (max-width: 600px) {
-    .cardDesc1,.cardDesc2,.cardDesc3,.cardDesc4{
+    .cardDesc1{
         width: 90%;
         margin-top: 10px;
     }
