@@ -1,0 +1,151 @@
+@font-face {
+    font-family:Poppins;
+    src: url(./Fonts/Poppins/Poppins-Medium.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    font-family: Poppins;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 251, 251);
+}
+main{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.navBar{
+    height: 90px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgb(224, 218, 218); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.logo{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: 1px solid rgb(90, 90, 238);
+    border-radius: 18px;
+    padding: 5px;
+    background-color: rgba(110, 110, 246, 0.906);
+
+}
+.navItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+#searchBar{
+    border: 1px solid rgba(0, 0, 0, 0.337);
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: start;
+}
+.searchIcon{
+    display: none!important;
+}
+.searchBtn{
+    background-color: rgba(110, 110, 246, 0.906);
+    border: none;
+    color: white;
+    padding: 3px 7px 3px 7px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cards{
+    width: 100%;
+    height: 18rem!important;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.cardDesc1,.cardDesc2,.cardDesc3,.cardDesc4{
+    width: 32%;
+    text-align: center;
+    box-shadow: rgba(91, 91, 98, 0.2) 0px 7px 29px 0px;
+    border: 1px solid rgb(97, 91, 91);
+    margin-bottom: 15px;
+}
+.cardImg,.descriptionDiv{
+    width: 100%;
+    /* height: 20%; */
+}
+.descriptionDiv, .cardTitle{
+    padding: 8px;
+}
+img{
+    width: 100%;
+    height: 250px;
+}
+button{
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: rgba(110, 110, 246, 0.906);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.cardTitle{
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+
+}
+p{
+    /* margin-top: 10px;
+    margin-bottom: 15px; */
+    font-size: 15px;
+}
+
+@media (max-width: 850px) {
+       .cardDesc1,.cardDesc2,.cardDesc3,.cardDesc4{
+       width: 40%;
+       margin-top: 10px;
+   }
+}
+
+@media (max-width: 600px) {
+    .cardDesc1,.cardDesc2,.cardDesc3,.cardDesc4{
+        width: 90%;
+        margin-top: 10px;
+    }
+    .navLogo{
+        padding: 1px;
+    }  
+    .logo{
+        font-size: 18px;
+    }
+   
+    #searchBar{
+        width: 150px;
+    }
+    .searchIcon{
+        display: flex!important;
+    }
+    .searchBtn{
+        display: none;
+    }
+}
