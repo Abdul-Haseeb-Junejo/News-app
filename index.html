@@ -16,27 +16,30 @@
     <!--NavBar-->
     <div class="main">
         <div class="navBar">
-                <a href="#" class="logo">Plus9News</a>
+                <a href="#" class="logo">Plus9-News</a>
             <div class="navItems">
                 <input type="text" name="" id="searchBar" placeholder="Search News...">
-                <i class="searchIcon fa-solid fa-magnifying-glass"></i>
+               <span class="searchIconSpan"><i class="searchIcon fa-solid fa-magnifying-glass" onclick="searchNews()"></i></span> 
                 <button class="searchBtn" onclick="searchNews()">Search</button>
             </div>
         </div>
     
     <!--NavBar END-->
+    <div class="headingDiv">
+        <h3 id="newsResult"></h3>
+    </div>
 
     <!--Cards-->
     <div class="cards">
-        <h3 id="newsResult"></h3>
 
     </div>
 
-<!-- <footer>
+<footer>
     <div class="footerItems">
-        <h5>Developed by Abdul Haseeb Junejo</h5>
+        <h5 class="footerHeading">Developed by Abdul Haseeb Junejo</h5>
+        <p>Copyright &copy; | All rights reserved </p>
     </div>
-</footer> -->
+</footer>
 
 </div>
 

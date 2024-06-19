@@ -1,6 +1,7 @@
 let searchBar = document.getElementById('searchBar');
-let cardsDiv = document.querySelector('.cards'),
-newsResult = document.getElementById('newsResult');
+let cardsDiv = document.querySelector('.cards');
+
+const newsResult = document.getElementById('newsResult');
 
 
 var defaultNews =()=>{  
@@ -14,7 +15,7 @@ return new Promise(function(resolve,reject){
     .then(function(res){
         resolve(res);
         displayNews(res);
-        newsResult.innerHTML = "Showing Result for Pakistan";
+        newsResult.innerText = "Showing Result for Pakistan";
         console.log(res);
     })
     .catch(function(err){
@@ -23,7 +24,7 @@ return new Promise(function(resolve,reject){
     })
 })
 }
-// window.onload = defaultNews();
+window.onload = defaultNews();
 
 var searchNews = () => {
     return new Promise(function(resolve, reject) {
@@ -34,6 +35,7 @@ var searchNews = () => {
             .then(function(res) {
                 resolve(res);
                 displayNews(res);
+                // newsResult.innerHTML = ``
                 console.log(res);
             })
             .catch(function(err) {

@@ -20,37 +20,45 @@ main{
     position: relative;
 }
 .navBar{
+    background-color: rgb(194, 226, 238);
+    width: 100%;
     height: 90px;
     padding-top: 10px;
     padding-bottom: 15px;
-    border-bottom: 2px solid rgb(224, 218, 218); 
+    border-bottom: 2px solid rgb(219, 219, 219); 
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+    gap: 10px;
+
 }
 .logo{
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 20px;
-    border: 1px solid rgb(90, 90, 238);
-    border-radius: 18px;
+    font-size: 23px;
+    border: 5px solid rgb(90, 90, 238);
+    border-radius: 17px;
     padding: 5px;
     background-color: rgba(110, 110, 246, 0.906);
 
 }
 .navItems{
+    width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
 }
 #searchBar{
-    border: 1px solid rgba(0, 0, 0, 0.337);
-    height: 30px;
-    width: 250px;
+    border: 1px solid rgba(140, 140, 140, 0.337);
+    width: 100%;
+    padding: 7px;
     border-radius: 10px;
-    text-align: start;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline: none;
+}
+input::placeholder{
+    font-size: 15px;
 }
 .searchIcon{
     display: none!important;
@@ -59,11 +67,13 @@ main{
     background-color: rgba(110, 110, 246, 0.906);
     border: none;
     color: white;
-    padding: 3px 7px 3px 7px;
+    padding: 5.5px;
     border-radius: 12px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 .cards{
     width: 100%;
@@ -76,26 +86,20 @@ main{
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    
 }
-/* .newsResult{
-    /* margin-top: 10px; */
 
 .cardDesc1{
-    height: 50%;
+    height: 510px;
     width: 32%;
     text-align: center;
     box-shadow: rgba(91, 91, 98, 0.2) 0px 7px 29px 0px;
     border: 1px solid rgb(97, 91, 91);
     margin-bottom: 15px;
+    position: relative;
 }
 .cardImg{
     width: 100%;
-    /* background-color: blueviolet; */
-    /* height: 100%; */
-    /* object-fit: cover; */
-    /* background-color: red; */
-    /* margin: 0;
-    padding: 0; */
 }
 
 .descriptionDiv {
@@ -109,22 +113,19 @@ main{
 
 }
 
-
 img{
     width: 100%;
     height: 250px;
 }
 .visitBtn{
-    /* position: absolute;
-    bottom: 0;
-     */
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
     border: none;
     color: white;
     padding: 5px;
     border-radius: 6px;
     background-color: rgba(110, 110, 246, 0.906);
-    margin-top: 15px;
-    margin-bottom: 10px;
     font-size: 15px;
     cursor: pointer;
 }
@@ -135,6 +136,37 @@ img{
 }
 p{
     padding-top: 5px;
+    font-size: 15px;
+}
+.headingDiv{
+    display: flex;
+}
+#newsResult{
+    margin-top: 30px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(46, 45, 45);
+    position: absolute;
+    width: 100%;
+}
+.footerItems{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.footerHeading{
+    margin: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: lighter;
+    
+}
+.footerItems p{
+    color: white;
     font-size: 15px;
 }
 
@@ -158,10 +190,18 @@ p{
     }
    
     #searchBar{
-        width: 150px;
+        width: 100%;
+    }
+    .searchIconSpan{
+        background-color: rgba(110, 110, 246, 0.906);
+        padding: 9.8px;
+        border-radius: 6px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
     }
     .searchIcon{
         display: flex!important;
+        color: white;
     }
     .searchBtn{
         display: none;
